@@ -43,10 +43,23 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    #Second graph
+    category_names = df.columns.values[4:]
+    category_counts = df[category_names].sum()
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
-        {
+            {
+             'data' : [
+                    Bar(x=category_counts,y=category_names, orientation='h')
+                    ],
+            'layout' : {
+                    'title' : 'Distribution of Categories',
+                    'yaxis' : {'title' : 'Count'},
+                    'xaxis' : {'title' : 'Category'}
+                    }
+            },
             'data': [
                 Bar(
                     x=genre_names,
