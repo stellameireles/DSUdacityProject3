@@ -1,7 +1,7 @@
 # DSUdacityProject3
 Project 3 of the Data Scientist course at Udacity.
 
-The main goal of the project is to buld a model to analyse the messages of the dataset provided by Figure Eight and classify these messages.
+The main goal of the project is to build a model to analyse the messages of the dataset provided by Figure Eight and classify these messages.
 
 # Libraries 
 
